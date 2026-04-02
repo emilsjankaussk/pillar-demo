@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AmberInvest — Dzīvokļi Rīgā | Pieteikties apskatei</title>
+  <meta name="description" content="Jauni dzīvokļi Rīgā ar pilnu apdari. Piesakies apskatei jau šodien!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="amber.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="anav">
+  <div class="anav-inner">
+    <a href="#" class="alogo">
+      <div class="alogo-mark">A</div>
+      <div class="alogo-text">
+        <span class="alogo-name">AmberInvest</span>
+        <span class="alogo-tag">Nekustamais īpašums</span>
+      </div>
+    </a>
+    <a href="#interest-form" class="anav-cta">Pieteikties apskatei</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="ahero">
+  <div class="ahero-slider">
+    <div class="aslide active" style="background-image:url('/images/facade/facade7.jpg')"></div>
+    <div class="aslide" style="background-image:url('/images/facade/facade1.jpg')"></div>
+    <div class="aslide" style="background-image:url('/images/facade/facade3.jpg')"></div>
+    <div class="aslide" style="background-image:url('/images/interior/int1.jpg')"></div>
+    <div class="aslide" style="background-image:url('/images/interior/int2.jpg')"></div>
+  </div>
+  <div class="ahero-overlay"></div>
+  <div class="ahero-content">
+    <div class="ahero-badge">🏠 Jauns projekts · Rīga</div>
+    <h1>Dzīvo gudri.<br>Investē droši.</h1>
+    <p>Pilnībā renovēti dzīvokļi ar modernu apdari Rīgas sirdī.<br>Energoefektīvi, kvalitatīvi, ar mākslinieciski veidotu interjerā.</p>
+    <div class="ahero-stats">
+      <div class="ahero-stat"><strong>3</strong><span>stāvi</span></div>
+      <div class="ahero-stat"><strong>24</strong><span>dzīvokļi</span></div>
+      <div class="ahero-stat"><strong>A</strong><span>energoklase</span></div>
+      <div class="ahero-stat"><strong>2026</strong><span>gatavs</span></div>
+    </div>
+    <a href="#interest-form" class="ahero-btn">Pieteikties skatei →</a>
+  </div>
+  <div class="ahero-arrows">
+    <button onclick="aSlide(-1)">&#8592;</button>
+    <button onclick="aSlide(1)">&#8594;</button>
+  </div>
+  <div class="ahero-dots" id="adots"></div>
+</section>
+
+<!-- BUILDING INFO -->
+<section id="abuilding">
+  <div class="acontainer">
+    <div class="asection-label">Par projektu</div>
+    <h2>Pārdomāts risinājums<br>kvalitatīvai dzīvošanai</h2>
+    <div class="abuilding-grid">
+      <div class="abuilding-specs">
+        <div class="aspec-item">
+          <div class="aspec-icon">🏗️</div>
+          <div>
+            <strong>Konstrukcija</strong>
+            <p>Monolīts betona karkass ar ķieģeļu aizpildījumu, fasāde — minerālapmetums</p>
+          </div>
+        </div>
+        <div class="aspec-item">
+          <div class="aspec-icon">🌡️</div>
+          <div>
+            <strong>Energoefektivitāte</strong>
+            <p>Energoklase A — augstākā pieejamā klase, zemi uzturēšanas izdevumi</p>
+          </div>
+        </div>
+        <div class="aspec-item">
+          <div class="aspec-icon">🔧</div>
+          <div>
+            <strong>Apdare</strong>
+            <p>Pilna apdare ar marmora grīdu, LED apgaismojumu, melnā metāla logu rāmji</p>
+          </div>
+        </div>
+        <div class="aspec-item">
+          <div class="aspec-icon">🚗</div>
+          <div>
+            <strong>Stāvvietas</strong>
+            <p>Bruģakmens pagalms ar piebraucamo ceļu, personīgās autostāvvietas</p>
+          </div>
+        </div>
+        <div class="aspec-item">
+          <div class="aspec-icon">🛗</div>
+          <div>
+            <strong>Lifts</strong>
+            <p>Modernizēts lifts katrā kāpņu telpā, pieejams visiem stāviem</p>
+          </div>
+        </div>
+        <div class="aspec-item">
+          <div class="aspec-icon">📍</div>
+          <div>
+            <strong>Atrašanās vieta</strong>
+            <p>Centrāla atrašanās vieta Rīgā, ērta piekļuve sabiedriskajam transportam</p>
+          </div>
+        </div>
+      </div>
+      <div class="abuilding-gallery">
+        <div class="agallery-main">
+          <img src="/images/facade/facade7.jpg" alt="Fasāde" id="agallery-main-img">
+        </div>
+        <div class="agallery-thumbs">
+          <img src="/images/facade/facade7.jpg" onclick="setMain(this)" class="athumb active" alt="">
+          <img src="/images/facade/facade1.jpg" onclick="setMain(this)" class="athumb" alt="">
+          <img src="/images/facade/facade3.jpg" onclick="setMain(this)" class="athumb" alt="">
+          <img src="/images/interior/int1.jpg" onclick="setMain(this)" class="athumb" alt="">
+          <img src="/images/interior/int2.jpg" onclick="setMain(this)" class="athumb" alt="">
+          <img src="/images/interior/int3.jpg" onclick="setMain(this)" class="athumb" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERIOR GALLERY -->
+<section id="aintgallery">
+  <div class="acontainer">
+    <div class="asection-label">Interjers</div>
+    <h2>Telpas, kurās gribas atgriezties</h2>
+    <p class="asubtitle">Katrs dzīvoklis veidots ar uzmanību detaļām — marmora grīda, LED apgaismojums, moderna vannas istaba.</p>
+    <div class="aint-grid">
+      <img src="/images/interior/int1.jpg" alt="Interjers 1" class="aint-img big">
+      <img src="/images/interior/int2.jpg" alt="Interjers 2" class="aint-img">
+      <img src="/images/interior/int3.jpg" alt="Interjers 3" class="aint-img">
+      <img src="/images/interior/int4.jpg" alt="Interjers 4" class="aint-img">
+      <img src="/images/interior/int5.jpg" alt="Interjers 5" class="aint-img">
+      <img src="/images/interior/int6.jpg" alt="Interjers 6" class="aint-img">
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLANS -->
+<section id="aplans">
+  <div class="acontainer">
+    <div class="asection-label">Plānojumi</div>
+    <h2>Izvēlies sev piemērotāko</h2>
+    <p class="asubtitle">Pieejami 2-istabu un 3-istabu dzīvokļi ar loģisku telpas izkārtojumu un pilnu apdari.</p>
+    <div class="aplans-tabs">
+      <button class="aplan-tab active" onclick="switchPlan('p2')">2-istabu dzīvokļi</button>
+      <button class="aplan-tab" onclick="switchPlan('p3')">3-istabu dzīvokļi</button>
+    </div>
+    <div id="p2" class="aplan-panel">
+      <div class="aplan-wrap">
+        <div class="aplan-img">
+          <img src="/images/plan2room.png" alt="2-istabu plānojums">
+        </div>
+        <div class="aplan-details">
+          <h3>2-istabu dzīvoklis</h3>
+          <div class="aplan-price">no <strong>€65 000</strong></div>
+          <div class="aplan-rows">
+            <div class="aplan-row"><span>Kopējā platība</span><span>~45 m²</span></div>
+            <div class="aplan-row"><span>Dzīvojamā istaba + virtuve</span><span>22 m²</span></div>
+            <div class="aplan-row"><span>Guļamistaba</span><span>12 m²</span></div>
+            <div class="aplan-row"><span>Vannas istaba</span><span>5 m²</span></div>
+            <div class="aplan-row"><span>Priekštelpa</span><span>6 m²</span></div>
+            <div class="aplan-row"><span>Apdare</span><span>Pilna apdare</span></div>
+            <div class="aplan-row"><span>Stāvs</span><span>1.–3. stāvs</span></div>
+          </div>
+          <a href="#interest-form" class="aplan-cta">Interesē šis dzīvoklis →</a>
+        </div>
+      </div>
+    </div>
+    <div id="p3" class="aplan-panel hidden">
+      <div class="aplan-wrap">
+        <div class="aplan-img">
+          <img src="/images/plan3room.png" alt="3-istabu plānojums">
+        </div>
+        <div class="aplan-details">
+          <h3>3-istabu dzīvoklis</h3>
+          <div class="aplan-price">no <strong>€89 000</strong></div>
+          <div class="aplan-rows">
+            <div class="aplan-row"><span>Kopējā platība</span><span>~65 m²</span></div>
+            <div class="aplan-row"><span>Dzīvojamā istaba + virtuve</span><span>28 m²</span></div>
+            <div class="aplan-row"><span>Guļamistaba 1</span><span>14 m²</span></div>
+            <div class="aplan-row"><span>Guļamistaba 2</span><span>11 m²</span></div>
+            <div class="aplan-row"><span>Vannas istaba</span><span>6 m²</span></div>
+            <div class="aplan-row"><span>Priekštelpa</span><span>6 m²</span></div>
+            <div class="aplan-row"><span>Apdare</span><span>Pilna apdare</span></div>
+          </div>
+          <a href="#interest-form" class="aplan-cta">Interesē šis dzīvoklis →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="interest-form">
+  <div class="acontainer">
+    <div class="aform-wrap">
+      <div class="aform-left">
+        <div class="asection-label light">Pieteikties</div>
+        <h2>Interesē dzīvoklis?<br>Sazinieties ar mums!</h2>
+        <p>Aizpildiet anketu un mūsu speciālists ar jums sazināsies 24 stundu laikā, lai vienotos par apskatīšanas laiku.</p>
+        <div class="aform-guarantees">
+          <div class="aguarantee">✓ Bezmaksas apskate bez saistībām</div>
+          <div class="aguarantee">✓ Atbildam 24 stundu laikā</div>
+          <div class="aguarantee">✓ Jūsu dati tiek aizsargāti</div>
+        </div>
+      </div>
+      <div class="aform-right">
+        <form id="lead-form" onsubmit="submitForm(event)">
+          <div class="afield-group">
+            <label>Vārds *</label>
+            <input type="text" id="fname" placeholder="Jūsu vārds" required>
+          </div>
+          <div class="afield-group">
+            <label>Uzvārds *</label>
+            <input type="text" id="lname" placeholder="Jūsu uzvārds" required>
+          </div>
+          <div class="afield-group">
+            <label>Telefona numurs *</label>
+            <input type="tel" id="phone" placeholder="+371 __ __ __" required>
+          </div>
+          <div class="afield-group">
+            <label>E-pasts</label>
+            <input type="email" id="email" placeholder="jūsu@epasts.lv">
+          </div>
+          <div class="afield-group">
+            <label>Interesē</label>
+            <select id="apt-type">
+              <option value="">Jebkurš variants</option>
+              <option value="2room">2-istabu dzīvoklis (~45 m²)</option>
+              <option value="3room">3-istabu dzīvoklis (~65 m²)</option>
+            </select>
+          </div>
+          <div class="afield-group afield-check">
+            <label class="acheck-label">
+              <input type="checkbox" id="consent" required>
+              <span>Piekrītu <a href="#">personas datu apstrādes nosacījumiem</a> un saziņai par piedāvājumu</span>
+            </label>
+          </div>
+          <div class="afield-group afield-check">
+            <label class="acheck-label">
+              <input type="checkbox" id="newsletter">
+              <span>Vēlos saņemt jaunumus par AmberInvest projektiem</span>
+            </label>
+          </div>
+          <button type="submit" class="asubmit-btn">
+            <span id="submit-text">Nosūtīt pieteikumu</span>
+          </button>
+        </form>
+        <div id="form-success" class="aform-success hidden">
+          <div class="asuccess-icon">✓</div>
+          <h3>Paldies! Pieteikums saņemts.</h3>
+          <p>Mūsu speciālists ar jums sazināsies tuvāko 24 stundu laikā.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="afooter">
+  <div class="acontainer">
+    <div class="afooter-inner">
+      <div>
+        <div class="alogo" style="margin-bottom:12px">
+          <div class="alogo-mark">A</div>
+          <div class="alogo-text">
+            <span class="alogo-name">AmberInvest</span>
+            <span class="alogo-tag">Nekustamais īpašums</span>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#aaa;max-width:260px;line-height:1.6">Kvalitatīvi nekustamā īpašuma risinājumi Rīgā un Latvijā.</p>
+      </div>
+      <div class="afooter-links">
+        <strong>Kontakti</strong>
+        <a href="tel:+37120000000">+371 20 000 000</a>
+        <a href="mailto:info@amberinvest.lv">info@amberinvest.lv</a>
+        <a href="#">Privātuma politika</a>
+      </div>
+      <div class="afooter-links">
+        <strong>Seko mums</strong>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="afooter-bottom">
+      <span>© 2026 AmberInvest. Visas tiesības aizsargātas.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/37120000000" class="awa-float" target="_blank" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// HERO SLIDER
+const slides = document.querySelectorAll('.aslide');
+const dotsEl = document.getElementById('adots');
+let cur = 0;
+slides.forEach((_, i) => {
+  const d = document.createElement('span');
+  d.className = 'adot' + (i===0?' active':'');
+  d.onclick = () => goSlide(i);
+  dotsEl.appendChild(d);
+});
+function goSlide(n) {
+  slides[cur].classList.remove('active');
+  document.querySelectorAll('.adot')[cur].classList.remove('active');
+  cur = (n + slides.length) % slides.length;
+  slides[cur].classList.add('active');
+  document.querySelectorAll('.adot')[cur].classList.add('active');
+}
+function aSlide(d) { goSlide(cur + d); }
+setInterval(() => goSlide(cur+1), 5000);
+
+// BUILDING GALLERY
+function setMain(el) {
+  document.getElementById('agallery-main-img').src = el.src;
+  document.querySelectorAll('.athumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// PLAN TABS
+function switchPlan(id) {
+  document.querySelectorAll('.aplan-panel').forEach(p => p.classList.add('hidden'));
+  document.querySelectorAll('.aplan-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.remove('hidden');
+  event.target.classList.add('active');
+}
+
+// FORM SUBMIT
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-text');
+  btn.textContent = 'Nosūta...';
+  setTimeout(() => {
+    document.getElementById('lead-form').classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+    console.log('Lead captured:', {
+      name: document.getElementById('fname').value + ' ' + document.getElementById('lname').value,
+      phone: document.getElementById('phone').value,
+      email: document.getElementById('email').value,
+      type: document.getElementById('apt-type').value,
+    });
+  }, 1000);
+}
+
+// SCROLL ANIMATIONS
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('avisible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.aspec-item, .aint-img, .aplan-wrap, .abuilding-gallery').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

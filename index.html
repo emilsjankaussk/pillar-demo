@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar Living — Jaunie projekti Rīgā</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <span>Mēs izmantojam sīkdatnes, lai uzlabotu jūsu pieredzi.</span>
+  <div class="cookie-btns">
+    <button onclick="document.getElementById('cookie-banner').style.display='none'" class="btn-accept">Pieņemt</button>
+    <button onclick="document.getElementById('cookie-banner').style.display='none'" class="btn-reject">Noraidīt</button>
+    <button onclick="document.getElementById('cookie-banner').style.display='none'" class="btn-manage">Pārvaldīt</button>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <svg viewBox="0 0 80 60" width="70" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="10" width="10" height="50" fill="#005670"/>
+        <rect x="24" y="0" width="10" height="60" fill="#005670"/>
+        <rect x="40" y="15" width="10" height="45" fill="#005670"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name">pillar</span>
+        <span class="logo-sub">www.pillar.lv</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item has-dropdown">
+        <a href="#">Jaunie projekti <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#">Mežciema mājas</a>
+          <a href="#">Dreiliņu priedes</a>
+          <a href="#">Dārzciema liepas</a>
+          <a href="#">Iļģuciema mājas</a>
+          <a href="#">New Hanza apartamenti</a>
+        </div>
+      </div>
+      <a href="#">Iegāde</a>
+      <div class="nav-item has-dropdown">
+        <a href="#">Īre <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#">Mežciema mājas</a>
+          <a href="#">Dreiliņu priedes</a>
+        </div>
+      </div>
+      <a href="#">Īpašie piedāvājumi</a>
+      <a href="#">Par mums</a>
+      <a href="#">Aktualitātes</a>
+      <a href="#">Kontakti</a>
+    </div>
+    <div class="nav-lang">
+      <span class="lang active">LV</span>
+      <span class="lang-sep">|</span>
+      <a href="#" class="lang">RU</a>
+      <span class="lang-sep">|</span>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1920&q=80')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Kvalitāte,<br>lai Tu justos labi</h1>
+      <p>Lēmums par dzīvokļa iegādi ir viens no svarīgākajiem dzīvē.<br>Ideālā gadījumā tas nepieļauj kompromisus. Pārliecinies par<br>Pillar jauno projektu kvalitāti un esi gandarīts par izdarīto izvēli.</p>
+    </div>
+  </div>
+  <button class="hero-arrow left" onclick="prevSlide()">&#8592;</button>
+  <button class="hero-arrow right" onclick="nextSlide()">&#8594;</button>
+  <div class="hero-dots">
+    <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+  <div class="hero-scroll-btn">
+    <a href="#projects"><span>&#8964;</span></a>
+  </div>
+  <div class="hero-ctas">
+    <a href="#projects" class="hero-cta-btn">Jaunie projekti</a>
+    <a href="#" class="hero-cta-btn">Īres dzīvokļi</a>
+    <a href="#news" class="hero-cta-btn">Aktualitātes</a>
+    <a href="#why-pillar" class="hero-cta-btn active">Kāpēc Pillar?</a>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <h2>Pillar Jaunie projekti</h2>
+      </div>
+      <div class="projects-desc">
+        <p>Katrs no Pillar radītajiem jaunajiem projektiem ir rūpīgi pārdomāts. Tajos ir izmantoti mūsdienīgi tehniskie risinājumi un ievēroti augsti kvalitātes standarti. Mēs radām vidi, kas uzlabo dzīves kvalitāti un liek justies labi, jo mums neviena detaļa nav par mazu un neviens projekts nav par lielu.</p>
+      </div>
+    </div>
+
+    <div class="projects-toolbar">
+      <div class="view-toggles">
+        <button class="view-btn active" title="Grid"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg></button>
+        <button class="view-btn" title="Map"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 13l4.553 2.276A1 1 0 0021 21.382V10.618a1 1 0 00-.553-.894L15 7m0 13V7m0 0L9 4"/></svg></button>
+      </div>
+      <div class="project-filters">
+        <a href="#" class="filter active">Rādīt visus</a>
+        <span>|</span>
+        <a href="#" class="filter">Būvniecība</a>
+        <span>|</span>
+        <a href="#" class="filter">Drīzumā</a>
+        <span>|</span>
+        <a href="#" class="filter">Nodots ekspluatācijā</a>
+      </div>
+      <a href="#" class="special-offers-btn">Īpašie piedāvājumi <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15 4.5l-8 8 8 8"/></svg></a>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project: Mežciema mājas 1 -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <span class="status-badge commissioned">Nodots ekspluatācijā</span>
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Mežciema mājas 1">
+          <button class="img-prev">&#8592;</button>
+          <button class="img-next">&#8594;</button>
+        </div>
+        <div class="project-info">
+          <div class="project-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Sergeja Eizenšteina iela 47a, Rīga</div>
+          <h3>Mežciema mājas 1</h3>
+          <div class="project-meta">
+            <span><strong>A+</strong> Energoklase</span>
+            <span><strong>10</strong> Stāvi</span>
+            <span><strong>79</strong> Dzīvokļi</span>
+          </div>
+          <div class="project-price">€102 600 – €219 900</div>
+          <details class="project-details">
+            <summary>Projekta detaļas <span>&#9660;</span></summary>
+            <div class="details-content">
+              <div class="detail-row"><span>Apdare:</span><span>Pilna apdare</span></div>
+              <div class="detail-row"><span>Stāvvietas:</span><span>49</span></div>
+              <div class="detail-row"><span>Nodošana ekspluatācijā:</span><span>2023</span></div>
+            </div>
+          </details>
+          <a href="#" class="project-link">Apskatīt projektu</a>
+        </div>
+      </div>
+
+      <!-- Project: Mežciema mājas 2 -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <span class="status-badge soon">Drīzumā</span>
+          <div class="reservation-badge">Uzsākta rezervācija</div>
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Mežciema mājas 2">
+          <button class="img-prev">&#8592;</button>
+          <button class="img-next">&#8594;</button>
+        </div>
+        <div class="project-info">
+          <div class="project-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Sergeja Eizenšteina iela 47, Rīga</div>
+          <h3>Mežciema mājas 2</h3>
+          <div class="project-meta">
+            <span><strong>A+</strong> Energoklase</span>
+            <span><strong>10</strong> Stāvi</span>
+            <span><strong>78</strong> Dzīvokļi</span>
+          </div>
+          <div class="project-price">Projektēšanā</div>
+          <details class="project-details">
+            <summary>Projekta detaļas <span>&#9660;</span></summary>
+            <div class="details-content">
+              <div class="detail-row"><span>Apdare:</span><span>Pilna apdare</span></div>
+              <div class="detail-row"><span>Stāvvietas:</span><span>88</span></div>
+            </div>
+          </details>
+          <a href="#" class="project-link">Apskatīt projektu</a>
+        </div>
+      </div>
+
+      <!-- Project: Dreiliņu priedes -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <span class="status-badge commissioned">Nodots ekspluatācijā</span>
+          <img src="https://images.unsplash.com/photo-1545324418-f84a87aa7168?auto=format&fit=crop&w=800&q=80" alt="Dreiliņu priedes">
+          <button class="img-prev">&#8592;</button>
+          <button class="img-next">&#8594;</button>
+        </div>
+        <div class="project-info">
+          <div class="project-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Ēvalda Valtera iela 1, Rīga</div>
+          <h3>Dreiliņu priedes</h3>
+          <div class="project-meta">
+            <span><strong>A+</strong> Energoklase</span>
+            <span><strong>4–9</strong> Stāvi</span>
+            <span><strong>122</strong> Dzīvokļi</span>
+          </div>
+          <div class="project-price">€110 600 – €190 500</div>
+          <details class="project-details">
+            <summary>Projekta detaļas <span>&#9660;</span></summary>
+            <div class="details-content">
+              <div class="detail-row"><span>Ēkas:</span><span>3 ēkas</span></div>
+              <div class="detail-row"><span>Nodošana ekspluatācijā:</span><span>08.2024</span></div>
+            </div>
+          </details>
+          <a href="#" class="project-link">Apskatīt projektu</a>
+        </div>
+      </div>
+
+      <!-- Project: Dārzciema liepas -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <span class="status-badge commissioned">Nodots ekspluatācijā</span>
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Dārzciema liepas">
+          <button class="img-prev">&#8592;</button>
+          <button class="img-next">&#8594;</button>
+        </div>
+        <div class="project-info">
+          <div class="project-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Franča Trasuna iela 17, Rīga</div>
+          <h3>Dārzciema liepas</h3>
+          <div class="project-meta">
+            <span><strong>A+</strong> Energoklase</span>
+            <span><strong>5</strong> Stāvi</span>
+            <span><strong>49</strong> Dzīvokļi</span>
+          </div>
+          <div class="project-price">€105 800 – €212 500</div>
+          <details class="project-details">
+            <summary>Projekta detaļas <span>&#9660;</span></summary>
+            <div class="details-content">
+              <div class="detail-row"><span>Nodošana ekspluatācijā:</span><span>11.2024</span></div>
+            </div>
+          </details>
+          <a href="#" class="project-link">Apskatīt projektu</a>
+        </div>
+      </div>
+
+      <!-- Project: New Hanza -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <span class="status-badge construction">Būvniecība</span>
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80" alt="New Hanza">
+          <button class="img-prev">&#8592;</button>
+          <button class="img-next">&#8594;</button>
+        </div>
+        <div class="project-info">
+          <div class="project-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Gustava Kluča iela 10, Rīga</div>
+          <h3>New Hanza apartamenti</h3>
+          <div class="project-meta">
+            <span><strong>A+</strong> Energoklase</span>
+            <span><strong>9</strong> Stāvi</span>
+            <span><strong>268</strong> Dzīvokļi</span>
+          </div>
+          <div class="project-price">Sazinieties, lai uzzinātu cenu</div>
+          <details class="project-details">
+            <summary>Projekta detaļas <span>&#9660;</span></summary>
+            <div class="details-content">
+              <div class="detail-row"><span>Ēkas:</span><span>4 ēkas</span></div>
+              <div class="detail-row"><span>Terases:</span><span>Līdz 100m²</span></div>
+              <div class="detail-row"><span>Istabas:</span><span>2–5 istabas</span></div>
+            </div>
+          </details>
+          <a href="#" class="project-link">Apskatīt projektu</a>
+        </div>
+      </div>
+
+      <!-- Project: Iļģuciema mājas -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <span class="status-badge construction">Būvniecība</span>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Iļģuciema mājas">
+          <button class="img-prev">&#8592;</button>
+          <button class="img-next">&#8594;</button>
+        </div>
+        <div class="project-info">
+          <div class="project-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Spilves iela 27, Rīga</div>
+          <h3>Iļģuciema mājas</h3>
+          <div class="project-meta">
+            <span><strong>A+</strong> Energoklase</span>
+            <span><strong>7</strong> Stāvi</span>
+            <span><strong>110</strong> Dzīvokļi</span>
+          </div>
+          <div class="project-price">Sazinieties, lai uzzinātu cenu</div>
+          <details class="project-details">
+            <summary>Projekta detaļas <span>&#9660;</span></summary>
+            <div class="details-content">
+              <div class="detail-row"><span>Ēkas:</span><span>2 ēkas</span></div>
+              <div class="detail-row"><span>Stāvvietas:</span><span>83</span></div>
+              <div class="detail-row"><span>Apdare:</span><span>Pilna apdare</span></div>
+            </div>
+          </details>
+          <a href="#" class="project-link">Apskatīt projektu</a>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- NEWS SECTION -->
+<section id="news">
+  <div class="container">
+    <div class="section-header-row">
+      <h2>Pillar aktualitātes</h2>
+      <a href="#" class="outline-btn">Skatīt visas aktualitātes</a>
+    </div>
+    <div class="news-grid">
+      <a href="#" class="news-card">
+        <div class="news-img"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=700&q=80" alt="News 1"></div>
+        <div class="news-body">
+          <span class="news-meta">03.03.2026 | Mežciema mājas</span>
+          <h4>Pillar uzsāks projekta Mežciema mājas 2. kārtas būvniecību</h4>
+          <p>Nekustamā īpašuma attīstītājs Pillar pavasarī plāno uzsākt projekta Mežciema mājas otrās kārtas būvniecību…</p>
+          <span class="read-more">Lasīt tālāk</span>
+        </div>
+      </a>
+      <a href="#" class="news-card">
+        <div class="news-img"><img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=700&q=80" alt="News 2"></div>
+        <div class="news-body">
+          <span class="news-meta">19.02.2026 | Aktualitātes</span>
+          <h4>Silts mājoklis un garantēti zemas uzturēšanas izmaksas</h4>
+          <p>Latvijas klimatiskajos apstākļos gandrīz pusi gada dzīvojam apsildītos telpās…</p>
+          <span class="read-more">Lasīt tālāk</span>
+        </div>
+      </a>
+      <a href="#" class="news-card">
+        <div class="news-img"><img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=700&q=80" alt="News 3"></div>
+        <div class="news-body">
+          <span class="news-meta">05.02.2026 | Aktualitātes</span>
+          <h4>Pillar kvalitāte tagad pieejama arī īrei</h4>
+          <p>Uzņēmums īres piedāvājumā piedāvā divistabas dzīvokļus platībā no 45,3 līdz 52,4 m²…</p>
+          <span class="read-more">Lasīt tālāk</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PILLAR SECTION -->
+<section id="why-pillar">
+  <div class="container">
+    <p class="why-eyebrow">Kāpēc izvēlēties Pillar jauno projektu?</p>
+    <div class="why-grid">
+      <div class="why-left">
+        <h2>Neviena detaļa nav par mazu, neviens projekts nav par lielu</h2>
+      </div>
+      <div class="why-right">
+        <p>Kā viens no vadošajiem nekustamo īpašumu attīstības un būvniecības uzņēmumiem Latvijā mēs ar aizrautību sekojam līdzi nozares jaunākajām tendencēm, lai nodrošinātu ilgtspējīgus projektus, kuros kvalitāte un dizains sastopas ar funkcionalitāti. Apņemšanās nodrošināt augstu kvalitāti un izcilību atspoguļojas ik katrā mūsu realizētajā projektā.</p>
+      </div>
+    </div>
+    <div class="why-circles">
+      <div class="why-circle">
+        <div class="circle-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80" alt="Profesionāla komanda"></div>
+        <p>Profesionāla un atbildīga komanda</p>
+      </div>
+      <div class="why-circle">
+        <div class="circle-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="Cieņa pret klientu"></div>
+        <p>Cieņa pret klientu</p>
+      </div>
+      <div class="why-circle">
+        <div class="circle-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=400&q=80" alt="Kvalitāte"></div>
+        <p>Kvalitāte</p>
+      </div>
+      <div class="why-circle">
+        <div class="circle-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80" alt="Iedziļināšanās"></div>
+        <p>Iedziļināšanās</p>
+      </div>
+      <div class="why-circle">
+        <div class="circle-img"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=400&q=80" alt="Mums ir svarīgi"></div>
+        <p>Mums ir svarīgi, lai Tu justos labi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">18</div>
+        <p>Viens no vadošajiem nekustamā īpašuma attīstības un būvniecības uzņēmumiem Latvijā, kas nozarē darbojas jau 18 gadus</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">21</div>
+        <p>Nozares apbalvojumi un atzinības par izcilību, ko Pillar saņēmis par realizētajiem projektiem</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <p>Attīstīšana, būvniecība un pārvaldība. Mēs nodrošinām pilna cikla procesu, sākot no projekta idejas līdz pat objekta</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">200</div>
+        <p>Pillar komandu veido vairāk kā 200 nozares profesionāļi, kuri ar aizrautību strādā pie katra projekta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="container">
+    <h2>Sazinieties ar mums!</h2>
+    <div class="managers-grid">
+      <div class="manager">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80" alt="Sandra Garsa-Ponse">
+        <h4>Sandra Garsa-Ponse</h4>
+        <p class="manager-title">Pārdošanas un iznomāšanas nodaļas speciāliste</p>
+        <a href="tel:+37125682682" class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.85 12.85 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.85 12.85 0 002.81.7A2 2 0 0122 16.92z"/></svg> +371 25 682 682</a>
+        <a href="mailto:sales@pillar.lv" class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sales@pillar.lv</a>
+      </div>
+      <div class="manager">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Karina Aleksejeva">
+        <h4>Karina Aleksejeva</h4>
+        <p class="manager-title">Pārdošanas un iznomāšanas nodaļas speciāliste</p>
+        <a href="tel:+37125633133" class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.85 12.85 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.85 12.85 0 002.81.7A2 2 0 0122 16.92z"/></svg> +371 25 633 133</a>
+        <a href="mailto:sales@pillar.lv" class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sales@pillar.lv</a>
+      </div>
+      <div class="manager">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Elīna Ozola">
+        <h4>Elīna Ozola</h4>
+        <p class="manager-title">Pārdošanas un iznomāšanas nodaļas vadītāja</p>
+        <a href="tel:+37129224774" class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.85 12.85 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.85 12.85 0 002.81.7A2 2 0 0122 16.92z"/></svg> +371 29 224 774</a>
+        <a href="mailto:sales@pillar.lv" class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sales@pillar.lv</a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <div class="contact-form">
+        <div class="form-left">
+          <div class="form-group"><input type="text" placeholder="Vārds"></div>
+          <div class="form-group"><input type="email" placeholder="E-pasts"></div>
+          <div class="form-group"><input type="tel" placeholder="Tālrunis"></div>
+          <div class="form-check"><label><input type="checkbox"> Pierakstīties jaunumu saņemšanai</label></div>
+          <div class="form-check"><label><input type="checkbox"> Nosūtot datus, piekrītu <a href="#">privātuma politikai.</a></label></div>
+          <button class="submit-btn">Sūtīt ziņu</button>
+        </div>
+        <div class="form-right">
+          <textarea placeholder="Jūsu komentārs vai jautājums"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-main">
+    <div class="footer-logo-col">
+      <a href="#" class="footer-logo">
+        <svg viewBox="0 0 80 60" width="60" height="45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="10" width="10" height="50" fill="#005670"/>
+          <rect x="24" y="0" width="10" height="60" fill="#005670"/>
+          <rect x="40" y="15" width="10" height="45" fill="#005670"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-name">pillar</span>
+          <span class="logo-sub">www.pillar.lv</span>
+        </div>
+      </a>
+    </div>
+    <div class="footer-contact-col">
+      <strong>Pillar Capital, AS</strong>
+      <a href="tel:+37167015666" class="footer-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.85 12.85 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.85 12.85 0 002.81.7A2 2 0 0122 16.92z"/></svg> +371 6701 5666</a>
+      <a href="mailto:info@pillar.lv" class="footer-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@pillar.lv</a>
+      <a href="https://maps.google.com/?q=Pulkveža+Brieža+iela+28A,+Rīga" class="footer-link" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Pulkveža Brieža iela 28A<br>Rīga, LV-1045</a>
+    </div>
+    <div class="footer-links-col">
+      <strong>Informācija:</strong>
+      <a href="#" class="footer-link">Garantijas pieteikums</a>
+      <a href="#" class="footer-link">Kontakti</a>
+      <a href="#" class="footer-link">Privātuma politika</a>
+      <a href="#" class="footer-link">Piekrišanas iestatījumi</a>
+      <a href="#" class="footer-link">Vietnes karte</a>
+    </div>
+    <div class="footer-social-col">
+      <strong>Seko mums:</strong>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@PillarLiving/videos" target="_blank" class="social-icon" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-2.47 13.38 13.38 0 00-4.7-1.52 12.72 12.72 0 00-7.74 2.85A4.73 4.73 0 012 9.25v5.5a4.73 4.73 0 011.38 3.7 13.38 13.38 0 007.74 2.85 12.72 12.72 0 004.7-1.52 4.83 4.83 0 013.77-2.47A4.87 4.87 0 0022 14.75v-5.5a4.87 4.87 0 00-2.41-2.56zM10 15V9l5 3-5 3z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/Pillar.lat" target="_blank" class="social-icon" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/pillar-group-companies" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zm2-4a2 2 0 100-4 2 2 0 000 4z"/></svg>
+        </a>
+        <a href="https://instagram.com/pillar.lv" target="_blank" class="social-icon" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Pillar</span>
+    <span>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> &amp; <a href="#">Terms of Service</a> apply.</span>
+    <a href="#" class="back-to-top" aria-label="Back to top">&#8593;</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/37125682682" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
